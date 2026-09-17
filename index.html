@@ -1,60 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FaRa Handyman’s & General Construction LLC</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FaRa Handyman's & General Construction LLC</title>
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif}
-nav{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.95);border-bottom:1px solid #292929;padding:16px 20px;text-align:center}
-nav a{color:#fff;text-decoration:none;margin:0 12px;font-weight:700;font-size:14px}
-nav a:hover{color:#d9b32f}
-section{padding:75px 20px;max-width:1100px;margin:auto}
-.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.logo{width:min(620px,90vw);display:block;margin:0 auto 25px}
-.gold{color:#d9b32f}
-h1{font-size:clamp(32px,6vw,60px);margin:10px 0}
-h2{text-align:center;font-size:34px;margin:0 0 35px;color:#d9b32f}
-.tagline{font-size:20px;font-weight:bold;letter-spacing:1px}
-.btn{display:inline-block;margin:10px 6px;padding:14px 24px;border:2px solid #d9b32f;border-radius:6px;color:#fff;text-decoration:none;font-weight:bold}
-.btn:hover{background:#d9b32f;color:#000}
-.intro{text-align:center;max-width:760px;margin:auto;line-height:1.7;color:#ddd}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{border:1px solid #333;border-radius:8px;padding:22px;background:#0b0b0b}
-.card h3{margin:0 0 8px;color:#d9b32f}
-.card p{margin:0;color:#ccc;line-height:1.5;font-size:14px}
-.contact{text-align:center}
-.contact-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:30px}
-.contact-item{border:1px solid #333;padding:24px;border-radius:8px;background:#0b0b0b}
-.contact-item h3{color:#d9b32f;margin-top:0}
-.contact-item a{color:#fff;text-decoration:none}
-footer{text-align:center;border-top:1px solid #292929;padding:30px 20px;color:#aaa;font-size:13px}
-@media(max-width:600px){nav a{margin:0 6px;font-size:12px}section{padding:60px 16px}.hero{min-height:82vh}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#fff;font-family:Arial,sans-serif}
+nav{position:fixed;top:0;width:100%;z-index:5;background:rgba(0,0,0,.9);border-bottom:1px solid #292929;padding:16px 5%;display:flex;justify-content:space-between}
+nav a{color:#fff;text-decoration:none;font-weight:bold;font-size:13px;margin-left:22px}nav a:hover{color:#d9b32f}
+.hero{min-height:100vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 35%,rgba(217,179,47,.18),transparent 30%),linear-gradient(120deg,#000,#111);padding:100px 6% 60px}
+.hero>div{max-width:900px}.eyebrow{color:#d9b32f;font-weight:bold;letter-spacing:3px;font-size:13px}
+.logo{width:min(390px,85vw);margin:22px 0 5px}.hero h1{font-size:clamp(44px,7vw,78px);line-height:.98;margin:12px 0 20px}.hero h1 span{color:#d9b32f}
+.hero p{color:#ccc;max-width:650px;font-size:18px;line-height:1.7}.btn{display:inline-block;padding:15px 23px;margin:8px 5px 0 0;border:1px solid #d9b32f;border-radius:4px;text-decoration:none;font-weight:bold}.primary{background:#d9b32f;color:#000}.secondary{color:#fff}.secondary:hover{background:#fff;color:#000}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);background:#0c0c0c;border-block:1px solid #292929}.quick div{text-align:center;padding:25px 10px;border-right:1px solid #292929}.quick strong{display:block;color:#d9b32f;font-size:13px;margin-bottom:7px}.quick span{font-size:13px;color:#aaa}
+section{max-width:1150px;margin:auto;padding:90px 5%}.label{text-align:center;color:#d9b32f;font-weight:bold;letter-spacing:3px;font-size:12px}h2{text-align:center;font-size:42px;margin:10px 0 42px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#101010;border:1px solid #292929;border-radius:8px;padding:24px}.card:hover{border-color:#d9b32f}.card h3{color:#d9b32f;margin:0 0 9px}.card p{color:#aaa;line-height:1.5;margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px}.about h2{text-align:left}.about p{color:#bbb;line-height:1.8}.languages{border-left:2px solid #d9b32f;padding-left:25px}.languages strong{color:#d9b32f}
+.contact{max-width:none;background:#0b0b0b;text-align:center}.contact-inner{max-width:1000px;margin:auto}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}.box{background:#050505;border:1px solid #292929;border-radius:8px;padding:25px}.box h3{color:#d9b32f}.box a{color:#fff;text-decoration:none}.box a:hover{color:#d9b32f}
+footer{text-align:center;padding:30px;color:#888;border-top:1px solid #292929;font-size:13px}
+@media(max-width:750px){nav a{margin-left:10px;font-size:11px}.quick{grid-template-columns:1fr 1fr}.services,.contact-grid,.about{grid-template-columns:1fr}.about h2{text-align:center}}
 </style>
 </head>
 <body>
-
-<nav>
-<a href="#home">HOME</a>
-<a href="#services">SERVICES</a>
-<a href="#about">ABOUT</a>
-<a href="#contact">CONTACT</a>
-</nav>
-
-<section id="home" class="hero">
-<div>
-<img class="logo" src="fara-logo.png" alt="FaRa Handyman’s & General Construction LLC">
-<p class="tagline gold">QUALITY WORK. RELIABLE SERVICE.</p>
-<a class="btn" href="#services">Our Services</a>
-<a class="btn" href="#contact">Get a Free Estimate</a>
-</div>
-</section>
-
-<section id="services">
-<h2>Our Services | Nuestros Servicios</h2>
-<div class="services">
+<nav><a href="#home">FA<span style="color:#d9b32f">RA</span></a><div><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div></nav>
+<header id="home" class="hero"><div>
+<div class="eyebrow">HANDYMAN & GENERAL CONSTRUCTION</div>
+<img class="logo" src="fara-logo.png" alt="FaRa Handyman's & General Construction LLC">
+<h1>Quality work.<br><span>Reliable service.</span></h1>
+<p>Professional construction, renovation and home improvement services. Serving our customers in English and Spanish.</p>
+<a class="btn primary" href="#contact">GET A FREE ESTIMATE</a><a class="btn secondary" href="#services">VIEW OUR SERVICES</a>
+</div></header>
+<div class="quick"><div><strong>ROOFING</strong><span>Repairs & installation</span></div><div><strong>SIDING</strong><span>Exterior improvements</span></div><div><strong>RENOVATIONS</strong><span>Kitchens & bathrooms</span></div><div><strong>HANDYMAN</strong><span>General home services</span></div></div>
+<section id="services"><div class="label">WHAT WE DO</div><h2>Our Services | Nuestros Servicios</h2><div class="services">
 <div class="card"><h3>Roofing | Techos</h3><p>Roofing installation, repairs and maintenance.</p></div>
 <div class="card"><h3>Siding | Revestimiento</h3><p>Exterior siding installation and repair.</p></div>
 <div class="card"><h3>Windows | Ventanas</h3><p>Window installation and replacement.</p></div>
@@ -64,43 +41,12 @@ footer{text-align:center;border-top:1px solid #292929;padding:30px 20px;color:#a
 <div class="card"><h3>Carpentry | Carpintería</h3><p>Custom carpentry, repairs and installations.</p></div>
 <div class="card"><h3>Kitchen & Bathroom</h3><p>Kitchen and bathroom renovation projects.</p></div>
 <div class="card"><h3>Painting | Pintura</h3><p>Interior and exterior painting services.</p></div>
-<div class="card"><h3>Handyman Services</h3><p>General home repairs and improvement projects.</p></div>
-</div>
-</section>
-
-<section id="about">
-<h2>About Us | Sobre Nosotros</h2>
-<p class="intro">
-FaRa Handyman’s & General Construction LLC provides reliable construction, renovation and home improvement services. 
-We work with customers in both <strong>English and Spanish</strong> and focus on quality workmanship, clear communication and dependable service.
-</p>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact Us | Contáctanos</h2>
-<p class="intro">Need a quote or have a project in mind? Contact us directly.</p>
-<div class="contact-box">
-<div class="contact-item">
-<h3>English</h3>
-<p><strong>Sergio</strong></p>
-<a class="btn" href="tel:+15513384437">Call 551-338-4437</a>
-</div>
-<div class="contact-item">
-<h3>Español</h3>
-<p><strong>Raul</strong></p>
-<a class="btn" href="tel:+15516555436">Llamar 551-655-5436</a>
-</div>
-<div class="contact-item">
-<h3>Email</h3>
-<a href="mailto:Farageneralconstructionllc@gmail.com">Farageneralconstructionllc@gmail.com</a>
-</div>
-</div>
-</section>
-
-<footer>
-FaRa Handyman’s & General Construction LLC<br>
-Quality Work. Reliable Service.
-</footer>
-
-</body>
-</html>
+</div></section>
+<section id="about"><div class="about"><div><div class="label" style="text-align:left">ABOUT FARA</div><h2>Built with care.<br>Done right.</h2><p>FaRa Handyman’s & General Construction LLC provides construction, renovation and home improvement services with a focus on dependable service and clear communication.</p></div><div class="languages"><p><strong>ENGLISH</strong><br>Contact Sergio for service and estimates.</p><p><strong>ESPAÑOL</strong><br>Contact Raul para servicio y estimados.</p></div></div></section>
+<section id="contact" class="contact"><div class="contact-inner"><div class="label">LET'S TALK</div><h2>Contact Us | Contáctanos</h2><p style="color:#aaa">Have a project in mind? Contact us for more information or a free estimate.</p><div class="contact-grid">
+<div class="box"><h3>English</h3><p>Sergio</p><a class="btn primary" href="tel:+15513384437">551-338-4437</a></div>
+<div class="box"><h3>Español</h3><p>Raul</p><a class="btn primary" href="tel:+15516555436">551-655-5436</a></div>
+<div class="box"><h3>Email</h3><p><a href="mailto:Farageneralconstructionllc@gmail.com">Farageneralconstructionllc@gmail.com</a></p></div>
+</div></div></section>
+<footer>© FaRa Handyman’s & General Construction LLC · Quality Work. Reliable Service.</footer>
+</body></html>
